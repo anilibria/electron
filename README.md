@@ -1,12 +1,13 @@
 # Anilibria All OS
 
-[![license:mit](https://img.shields.io/badge/license-mit-blue.svg)](https://opensource.org/licenses/MIT) [![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/) [![node](https://img.shields.io/node/v/electron.svg)](https://nodejs.org/)
+[![license:mit](https://img.shields.io/badge/license-mit-blue.svg)](https://opensource.org/licenses/MIT)
+[![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/)
+[![node](https://img.shields.io/node/v/electron.svg)](https://nodejs.org/)
 
-The application consists of two parts: `core` and `interface`.
-In simple words `core` it's "backend" of application and `interface` - "frontend"
-__Important!__ To use this application in development mode, you must have installed `npm` and `nodejs`.
-
-Interface of application made on Vuejs. Componered files storing in `interface/dist`
+The application consists of two parts: `core` and `interface`.  
+In simple words `core` it's "backend" of application and `interface` - "frontend"  
+__Important!__ To use this application in development mode, you must have installed `npm` and `nodejs`.  
+Interface of application made on Vuejs. Componered files storing in `interface/dist`  
 
 After cloning you need install dependencies:
 ```shell

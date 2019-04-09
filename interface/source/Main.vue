@@ -24,13 +24,12 @@ export default {
 
 
 <style lang="stylus">
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&subset=cyrillic-ext')
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=cyrillic-ext');
 @import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
 
-*
-    box-sizing border-box
-    font-family 'Roboto', sans-serif
-    transition .15s all
-    user-select none
+@import '~@style/fonts'
+@import '~@style/base'
 
 #page
     background url('~@img/pattern.jpg')
@@ -58,7 +57,7 @@ export default {
             top 0
 
 #view
-    background #FFF
+    background #000
     position absolute
     top 35px
     bottom 0

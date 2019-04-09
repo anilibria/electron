@@ -1,10 +1,8 @@
 <template lang="pug">
-    div( class='home' ) Index window
+    div#index
 </template>
 
-<script>
-export default {
-    name: 'index',
-    components: {}
-}
-</script>
+<style lang="stylus" scoped>
+@import '~@style/palette'
+
+</style>

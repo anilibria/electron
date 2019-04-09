@@ -7,6 +7,7 @@ const defaults = {
     frame: false,
     transparent: true,
     maximizable: false,
+    hasShadow: false,
     height: 600,
     with: 800,
     webPreferences: {
@@ -31,7 +32,6 @@ class Window extends BrowserWindow {
         story[name] = window;
         this.name = name;
 
-        window.webContents.openDevTools();
         window.on('ready-to-show', window.show);
         window.on('closed', function () {
             delete story[name];

@@ -2,6 +2,7 @@
 
 # custom ignore
 node_modules
+dist
 interface/dist
 package-lock.json
 

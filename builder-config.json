@@ -1,0 +1,70 @@
+{
+    "appId": "tv.anillibria.pc-app",
+    "productName": "Anilibria-TV",
+    "copyright": "Copyright © 2019 year Turar Abu",
+    "icon": "interface/assets/icon.ico",
+
+    "linux": {
+        "icon": "interface/assets/img/logo.png",
+        "category": "Network",
+        "synopsis": "Anilibria TV Linux application",
+        "target": [
+            {
+                "target": "deb",
+                "arch": ["x64", "ia32"]
+            },
+
+            {
+                "target": "rpm",
+                "arch": ["x64", "ia32"]
+            }
+        ]
+    },
+
+    "win": {
+        "icon": "interface/assets/img/icon.ico",
+        "target": {
+            "target": "nsis",
+            "arch": ["x64", "ia32"]
+        }
+    },
+
+    "snap": {
+        "confinement": "classic",
+        "grade": "devel"
+    },
+
+    "nsis": {
+        "oneClick": false,
+        "allowToChangeInstallationDirectory": true,
+        "license": "LICENSE.md",
+        "artifactName": "${productName} Installer ${version}.${ext}",
+        "installerIcon": "interface/assets/img/icon.ico",
+        "installerSidebar": "interface/assets/img/Installer-Sidebar.bmp"
+    },
+
+    "files": [
+        "**/*",
+
+        "!interface/assets",
+        "!interface/source",
+        "!.browserslistrc",
+        "!.gitignore",
+        "!builder-config.json",
+        "!package-lock.json",
+        "!postcss.config.js",
+        "!README.md",
+        "!vue.config.js",
+
+        "!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}",
+        "!**/node_modules/*/{test,__tests__,tests,powered-test,example,examples}",
+        "!**/node_modules/*.d.ts",
+        "!**/node_modules/.bin",
+        "!**/*.{iml,o,hprof,orig,pyc,pyo,rbc,swp,csproj,sln,xproj}",
+        "!**/._*",
+        "!**/{.DS_Store,.git,.hg,.svn,CVS,RCS,SCCS,.gitignore,.gitattributes}",
+        "!**/{__pycache__,thumbs.db,.flowconfig,.idea,.vs,.nyc_output}",
+        "!**/{appveyor.yml,.travis.yml,circle.yml}",
+        "!**/{npm-debug.log,yarn.lock,.yarn-integrity,.yarn-metadata.json}"
+    ]
+}

@@ -29,6 +29,7 @@ function checked (callback) {
 }
 
 function start () {
+    window.close();
     queue.forEach(function (callback) {
         callback();
     });

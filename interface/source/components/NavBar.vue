@@ -2,7 +2,7 @@
     div#nav
         div( class='adaptive' )
             div
-                span( class='logo' ) AnilibriaTV
+                span( class='logo' ) AniLibriaTV
                 label( class='label' )
                     i( class='fa fa-search' )
                     input( class='input' placeholder='Найти аниме' )

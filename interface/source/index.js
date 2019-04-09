@@ -19,7 +19,7 @@ new Vue({
     data: function () {
         return {
             kiosk: false,
-            title: 'Anilibria TV'
+            title: 'AniLibria TV'
         };
     }
 }).$mount('#app');

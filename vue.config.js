@@ -5,6 +5,7 @@ var pages = {};
 var externals = [];
 
 addPage('index');
+addPage('update');
 
 ignore('electron');
 

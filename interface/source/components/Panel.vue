@@ -15,7 +15,6 @@
 
 <script>
 import { remote } from 'electron'
-import { setInterval } from 'timers';
 
 export default {
     methods: { hide, screen, close },

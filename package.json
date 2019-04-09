@@ -7,7 +7,7 @@
     "start": "vue-cli-service build && electron main",
     "now": "electron main",
 
-    "vue-builder": "vue-cli-service build --watch",
+    "vue-builder": "vue-cli-service build --watch --mode=production",
     "vue-builder-once": "vue-cli-service build",
 
     "linux-builder": "build -l --config builder-config.json",

@@ -1,15 +1,13 @@
 {
   "name": "anilibria-allos",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Crossplatform PC-app for Anilibria",
   "main": "main.js",
   "scripts": {
     "start": "vue-cli-service build && electron main",
     "now": "electron main",
-
     "vue-builder": "vue-cli-service build --watch --mode=production",
     "vue-builder-once": "vue-cli-service build",
-
     "linux-builder": "build -l --config builder-config.json",
     "macos-builder": "build -m --config builder-config.json",
     "windows-builder": "build -w --config builder-config.json"
@@ -21,7 +19,7 @@
   "author": "Turar Abu <mailto:mail@turarabu.me>",
   "license": "MIT",
   "dependencies": {
-    "module-alias": "^2.2.0",
+    "electron-updater": "^4.0.6",
     "nedb": "^1.8.0"
   },
   "devDependencies": {

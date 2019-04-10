@@ -28,11 +28,12 @@ function checked (callback) {
     queue.push(callback);
 }
 
-function start () {
-    window.close();
-    queue.forEach(function (callback) {
-        callback();
-    });
+async function start () {
+    for (let i = 0; i != queue.length; ++i)
+        await queue[i]();
+
+    if (window)
+        window.close();
 }
 
 autoUpdater.on('update-available', function () {

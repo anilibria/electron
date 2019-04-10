@@ -4,6 +4,15 @@
     "copyright": "Copyright © 2019 year Turar Abu",
     "icon": "interface/assets/icon.ico",
 
+    "mac": {
+        "icon": "interface/assets/icon.ico",
+        "category": "public.app-category.video",
+        "target": {
+            "target": "dmg",
+            "arch": ["x64", "ia32"]
+        }
+    },
+
     "linux": {
         "icon": "interface/assets/img/logo.png",
         "category": "Network",

@@ -1,6 +1,6 @@
 {
   "name": "anilibria-allos",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "description": "Crossplatform PC-app for Anilibria",
   "main": "main.js",
   "scripts": {
@@ -8,6 +8,7 @@
     "now": "electron main",
     "vue-builder": "vue-cli-service build --watch --mode=production",
     "vue-builder-once": "vue-cli-service build",
+    "allos-builder": "build -mwl --config builder-config.json",
     "linux-builder": "build -l --config builder-config.json",
     "macos-builder": "build -m --config builder-config.json",
     "windows-builder": "build -w --config builder-config.json"

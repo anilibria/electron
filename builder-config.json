@@ -45,7 +45,6 @@
 
     "nsis": {
         "oneClick": false,
-        "allowToChangeInstallationDirectory": true,
         "license": "LICENSE.md",
         "artifactName": "${productName} Installer ${version}.${ext}",
         "installerIcon": "interface/assets/img/icon.ico",

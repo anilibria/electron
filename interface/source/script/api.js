@@ -1,3 +1,5 @@
+import querystring from 'querystring'
+
 export default {
     install: function (Vue) {
         Vue.prototype.anime = { list, ongoings };
@@ -5,17 +7,13 @@ export default {
 }
 
 function method (path, data = {}) {
-    var form = new FormData();
-
-    for (let key in data) {
-        if ( data.hasOwnProperty(key) )
-            form.append(key, data[key]);
-    }
-
-    return fetch(`https://anilibria.tv${path}`, {
+    return fetch(`https://www.anilibria.tv${path}`, {
         method: 'POST',
-        body: form,
-        redirect: 'follow'
+        body: querystring.stringify(data),
+        redirect: 'follow',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+        }
     });
 }
 

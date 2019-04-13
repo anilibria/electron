@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "checkJs": false,
+        "baseUrl": ".",
+        "paths": {
+            "app/*": ["./interface/source/*"],
+            "assets/*": ["./interface/assets/*"],
+            "img/*": ["./interface/assets/img/*"],
+            "component/*": ["./interface/source/components/*"],
+            "script/*": ["./interface/source/script/*"],
+            "style/*": ["./interface/source/style/*"],
+            "view/*": ["./interface/source/views/*"]
+        }
+    }
+}

@@ -6,7 +6,7 @@ const defaults = {
     show: false,
     frame: false,
     transparent: true,
-    maximizable: false,
+    resizable: false,
     hasShadow: false,
     height: 600,
     with: 800,

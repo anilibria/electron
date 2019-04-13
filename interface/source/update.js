@@ -1,6 +1,6 @@
 import Vue from 'vue'
 
-import Update from '@/Update.vue'
+import Update from 'app/Update.vue'
 
 Vue.config.productionTip = false;
 new Vue({

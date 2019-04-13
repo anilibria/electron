@@ -1,6 +1,6 @@
 <template lang="pug">
     div#panel
-        img( class='icon' src='@img/logo.png' )
+        img( class='icon' src='img/logo.png' )
         h3( class='title' ) {{ $root.title }}
 
         button( class='panel-button hide' @click='hide' )

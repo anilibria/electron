@@ -1,7 +1,7 @@
 <template lang="pug">
     div#update
         p( class='status-text' ) {{ $root.status === 0 ? 'Проверяю на обновления' : 'Скачиваю обновления' }}
-        img( class='prelaoder' src='@img/preloader.gif' )
+        img( class='prelaoder' src='img/preloader.gif' )
 </template>
 
 <script>
@@ -25,9 +25,9 @@ ipcRenderer.on('status', function (status) {
 <style lang="stylus">
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=cyrillic-ext')
 
-@import '~@style/fonts'
-@import '~@style/base'
-@import '~@style/palette'
+@import '~style/fonts'
+@import '~style/base'
+@import '~style/palette'
 
 #update
     align-items center

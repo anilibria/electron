@@ -1,96 +1,73 @@
 <template lang="pug">
     div#nav
         div( class='adaptive' )
-            div
-                span( class='logo' ) AniLibriaTV
-                label( class='label' )
-                    i( class='fa fa-search' )
-                    input( class='input' placeholder='Найти аниме' )
+            span( class='logo' ) AniLibria TV
+            nav( class='nav' )
+                span( class='link active' ) Онгоинги
+                span( class='link' ) Популярные
+                span( class='link' ) Избранные
+                span( class='link' ) Новости
 
-            div
-                span( class='sign-up' ) Регистрация
-                span( class='sign-in' ) Вход
+            label( class='label' )
+                i( class='fa fa-search' )
+                input( class='input' placeholder='Поиск' )
 
 </template>
 
 <style lang="stylus" scoped>
-@import '~@style/palette'
+@import '~style/palette'
 
 #nav
-    background RGBA(0, 0, 0, .75)
-    position sticky
-    top 0
-    left 0
-    right 0
 
     .adaptive
         align-items center
         display flex
         justify-content space-between
-        padding 16px 0
+        padding 24px 4px
 
     .logo
         color $alizarin
-        font-family 'Babes Neue', sans-serif
-        font-size 20px
-        font-weight 700
-
-    .label
-        align-items center
-        display inline-flex
-        margin 0 4px
-        position relative
-        top -2px
-
-        .fa
-            color $concrete
-            display inline-block
-            position relative
-            top -2px
-            left 24px
-
-        .input
-            background transparent
-            border none
-            border-bottom 1px solid #000
-            color $cloud
-            display inline-block
-            font-size 16px
-            font-weight 300
-            outline none
-            padding 4px 2px 6px 32px
-            transition .3s all
-            width 50px
-            &::placeholder
-                color transparent
-                font-weight 300
-            &:focus
-                border-bottom 1px solid $concrete
-                width 250px
-                &::placeholder
-                    color $asbestos
+        font-size 28px
+        font-weight 600
 
     .link
-        color $alizarin
-        cursor pointer
-        font-family 'Babes Neue', sans-serif
-        font-size 18px
-        font-weight 400
-        display inline-block
-        margin 0 32px
-
-    .sign-up
-        color $alizarin
-        cursor pointer
-        display inline-block
-        margin 0 12px
-
-    .sign-in
-        background $pomegranate
         color $cloud
         cursor pointer
         display inline-block
-        padding 6px 12px
-        &:hover
-            background $alizarin
+        font-size 16px
+        font-weight 600
+        margin 0 4px
+        &.active
+            color $alizarin
+            font-size 18px
+            font-weight 400
+
+    .label
+        position relative
+        width 250px
+
+        .fa
+            color $cloud
+            font-size 14px
+            position absolute
+            top 14px
+            left 6px
+
+        .input
+            background none
+            border none
+            border-bottom 2px solid transparent
+            color $cloud
+            font-size 18px
+            outline none
+            padding 8px 2px 8px 28px
+            width 90px
+            &::placeholder
+                color $cloud
+                font-weight 400
+            &:focus, &:not(:empty)
+                border-bottom 2px solid $alizarin
+                width 100%
+
+
 </style>

@@ -18,13 +18,14 @@ module.exports = {
         externals: externals,
         resolve: {
             alias: {
-                '@': `${source}`,
-                '@assets': `${interface}/assets`,
-                '@img': `${interface}/assets/img`,
+                'app': `${source}`,
+                'assets': `${interface}/assets`,
+                'img': `${interface}/assets/img`,
 
-                '@component': `${source}/components`,
-                '@script': `${source}/script`,
-                '@style': `${source}/style`
+                'component': `${source}/components`,
+                'script': `${source}/script`,
+                'style': `${source}/style`,
+                'view': `${source}/views`
             }
         }
     }

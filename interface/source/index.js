@@ -1,13 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import API from '@script/api.js'
-import Main from '@/Main.vue'
+import Main from 'app/Main.vue'
+import Index from 'view/Index.vue'
+import Profile from 'view/Profile.vue'
 
-import Index from '@/views/Index.vue'
-import Profile from '@/views/Profile.vue'
-
-Vue.use(API);
 Vue.use(Router);
 Vue.config.productionTip = false;
 

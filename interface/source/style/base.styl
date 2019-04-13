@@ -1,21 +1,39 @@
+@import '~style/palette'
+
 *
     box-sizing border-box
     font-family 'Open Sans', sans-serif
+    margin 0
+    padding 0
     transition .15s all
     user-select none
 
+::-webkit-scrollbar
+    background transparent
+    width 8px
+
+::-webkit-scrollbar-button
+    background transparent
+    width 16px
+
+
+::-webkit-scrollbar-track
+    background transparent
+    border-radius 16px
+
+::-webkit-scrollbar-thumb
+    background darken($midnightblue, 10)
+    border-radius 16px
+
+
 .adaptive
     margin 0 auto
-    width 720px
+    width 920px
 
-@media (min-width: 1300px)
+@media (min-width: 1500px)
     .adaptive
-        width 1200px
+        width 1160px
 
-@media (min-width: 1600px)
+@media (min-width: 1780px)
     .adaptive
-        width 1500px
-
-@media (min-width: 1900px)
-    .adaptive
-        width 1600px
+        width 1400px

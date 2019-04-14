@@ -12,6 +12,7 @@ const defaults = {
     with: 800,
     webPreferences: {
         experimentalFeatures: true,
+        webSecurity: false
     }
 };
 
@@ -45,7 +46,10 @@ class Window extends BrowserWindow {
      */
     set path (path) {
         var gui = config.gui;
-        this.loadURL(`file:///${gui.path}/${this.name}.html#${path}`);
+
+        if (gui.type === 'server')
+            this.loadURL(`http://${gui.host}:${gui.port}${path}`);
+        else this.loadURL(`file:///${gui.path}/${this.name}.html#${path}`);
     }
 
     /**

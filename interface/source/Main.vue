@@ -27,8 +27,11 @@ export default {
 @import '~style/base'
 @import '~style/palette'
 
+body
+    background url('~img/noise.jpg')
+
 #main
-    background darken($midnightblue, 7.5)
+    background linear-gradient(to bottom, RGBA(0, 0, 0, .85), RGBA(0, 0, 0, .825))
     overflow hidden
     position absolute
     top 0

@@ -1,6 +1,6 @@
 {
   "name": "anilibria-allos",
-  "version": "0.1.5",
+  "version": "0.1.8",
   "description": "Crossplatform PC-app for Anilibria",
   "main": "main.js",
   "scripts": {
@@ -21,6 +21,7 @@
   "license": "MIT",
   "dependencies": {
     "electron-updater": "^4.0.6",
+    "express": "^4.16.4",
     "nedb": "^1.8.0"
   },
   "devDependencies": {

@@ -9,37 +9,39 @@
                             button( class='favorite' )
                                 i( class='far fa-heart' )
 
-                            span( class='go' ) Перейти к просмотру
+                            span( class='go' @click='openAnime(item)' ) Перейти к просмотру
 
                             span( class='rating' )
                                 i( class='fa fa-star' )
                                 span {{ animeRating(item) }}
 
 
-                    h3( class='name' ) {{ animeName(item) }}
+                    h3( class='name' @click='openAnime(item)' ) {{ animeName(item) }}
                     p( class='year' ) {{ animeYear(item) }}
 </template>
 
 <script>
 export default {
-    methods: { animePoster, animeRating, animeYear, animeName },
+    methods: { openAnime, animePoster, animeRating, animeYear, animeName },
     props: ['title', 'browser', 'list'],
     mounted: function () {
         
     }
 }
 
+function openAnime (anime) {
+    this.$root.anime = anime;
+    this.$router.push('/browser')
+    this.$forceUpdate();
+}
+
 function animePoster (anime) {
-    // console.log(anime)
     return anime && anime.poster
         ? `https://www.anilibria.tv${ anime.poster }`
         : '';
 }
 
 function animeRating (anime) {
-    console.log('Exists: ', anime && anime.favorite);
-    console.log('Rating: ', anime && anime.favorite.rating);
-    console.log('\n')
     return anime && anime.favorite
         ? anime.favorite.rating
         : '';

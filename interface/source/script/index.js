@@ -1,32 +1,30 @@
 import NavBar from 'component/NavBar.vue'
 
 import AnimeList from 'component/AnimeList.vue'
-import AnimeBrowser from 'component/AnimeBrowser.vue'
 
 import api from 'script/lib/api'
 
 export default {
-    methods: { select },
-    components: { NavBar, AnimeList, AnimeBrowser },
+    components: { NavBar, AnimeList },
     created: init,
     data: function () {
         return {
             selected: false,
-            ongoings: Array(10)
+            ongoings: this.$root.ongoings || Array(10)
         }
     }
 }
 
 async function init () {
-    var list = await api.anime.list('ongoings');
+    if ( this.$root.ongoings )
+        return;
+    else {
+        var list = await api.anime.list('ongoings');
 
-    if(list !== false) {
-        this.ongoings = list;
-        this.$forceUpdate();
+        if(list !== false) {
+            this.$root.ongoings = list;
+            this.ongoings = list;
+            this.$forceUpdate();
+        }
     }
-}
-
-function select (anime) {
-    this.selected = anime;
-    this.$forceUpdate();
 }

@@ -8,11 +8,14 @@ div#sidebar
     div( class='explorer' )
         h3( class='title' ) Навигация
 
-        span( class='page-link red' )
+        router-link(
+            to='/browser'
+            active-class='active'
+            :class=`{'page-link purple': true, hide: !$root.anime}` )
             i( class='fa fa-pager' )
             span Обзор
 
-        span( class='page-link yellow active' )
+        router-link( class='page-link yellow' to='/index' active-class='active' )
             i( class='fa fa-globe-americas' )
             span Каталог
 
@@ -20,7 +23,7 @@ div#sidebar
             i( class='fa fa-download' )
             span Загрузки
 
-        span( class='page-link purple' )
+        span( class='page-link red' )
             i( class='fa fa-bell' )
             span Уведомления
 
@@ -32,6 +35,21 @@ div#sidebar
         h3( class='title' ) Поиск по фильтру
 
 </template>
+
+<script>
+export default {
+    mounted: function () {
+        var self = this;
+
+        this.$root.sidebar = this;
+        this.$router.afterEach(function () {
+            console.log(self.$router)
+            self.$forceUpdate();
+        });
+    }
+}
+</script>
+
 
 <style lang="stylus">
 @import '~style/palette'
@@ -90,7 +108,13 @@ div#sidebar
             cursor pointer
             display block
             font-weight 600
+            max-height 50px
+            overflow hidden
             padding 8px 20px
+            text-decoration none
+            &.hide
+                padding 0 20px
+                max-height 0
             &.active
                 background RGBA(0, 0, 0, .25)
                 border-right 6px solid

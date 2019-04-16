@@ -11,7 +11,7 @@ div#sidebar
         router-link(
             to='/browser'
             active-class='active'
-            :class=`{'page-link purple': true, hide: !$root.anime}` )
+            :class=`{'page-link purple': true, hide: !$store.state.anime}` )
             i( class='fa fa-pager' )
             span Обзор
 
@@ -43,7 +43,6 @@ export default {
 
         this.$root.sidebar = this;
         this.$router.afterEach(function () {
-            console.log(self.$router)
             self.$forceUpdate();
         });
     }

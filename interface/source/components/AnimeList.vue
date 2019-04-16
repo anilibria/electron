@@ -23,14 +23,12 @@
 <script>
 export default {
     methods: { openAnime, animePoster, animeRating, animeYear, animeName },
-    props: ['title', 'browser', 'list'],
-    mounted: function () {
-        
-    }
+    props: ['title', 'browser', 'list']
 }
 
 function openAnime (anime) {
-    this.$root.anime = anime;
+    this.$store.commit('setAnime', anime);
+
     this.$router.push('/browser')
     this.$forceUpdate();
 }

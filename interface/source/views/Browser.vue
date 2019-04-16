@@ -1,9 +1,7 @@
 <template lang="pug">
-    div#browser
+    div#browser( class='scroll-content' )
         NavBar
-
-        div#player( class='adaptive' )
-            video( class='video' :src='anime.playlist[0].srcHd' controls )
+        AnimePlayer( class='adaptive' :anime='anime' )
 
         div#info( class='adaptive' )
             div( class='poster' )

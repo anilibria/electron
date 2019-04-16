@@ -1,45 +1,17 @@
 import Vue from 'vue'
-import Router from 'vue-router'
+
+import router from 'script/router';
+import store from 'script/store';
 
 import Main from 'app/Main.vue'
-import Index from 'view/Index.vue'
-import Browser from 'view/Browser.vue'
-import Profile from 'view/Profile.vue'
 
-Vue.use(Router);
+Vue.use(router.use);
+Vue.use(store.use);
+
 Vue.config.productionTip = false;
 
 new Vue({
-    router: getRoutes(),
-    render: function (handler) {
-        return handler(Main);
-    },
-    data: function () {
-        return {
-            kiosk: false,
-            title: 'AniLibria TV'
-        };
-    }
+    router: router.data,
+    store: store.data(),
+    render: handler => handler(Main)
 }).$mount('#app');
-
-function getRoutes () {
-    return new Router({
-        mode: 'history',
-        routes: [
-            {
-                path: '/index',
-                component: Index
-            },
-            {
-                path: '/browser',
-                name: 'browser',
-                component: Browser
-            },
-            {
-                path: '/profile',
-                name: 'profile',
-                component: Profile
-            }
-        ]
-    });
-}

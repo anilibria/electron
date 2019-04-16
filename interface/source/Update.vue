@@ -1,7 +1,7 @@
 <template lang="pug">
     div#update
         p( class='status-text' ) {{ $root.status === 0 ? 'Проверяю на обновления' : 'Скачиваю обновления' }}
-        img( class='prelaoder' src='img/preloader.gif' )
+        img( class='prelaoder' src='~img/preloader.gif' )
 </template>
 
 <script>

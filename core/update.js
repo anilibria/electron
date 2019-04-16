@@ -18,7 +18,7 @@ function run () {
         width: 350
     });
 
-    window.path = '/';
+    window.path = '/update';
     window.on('show', function () {        
         autoUpdater.checkForUpdates();
     });

@@ -1,15 +1,29 @@
 import NavBar from 'component/NavBar.vue'
+import AnimePlayer from 'component/AnimePlayer.vue'
 
 export default {
-    components: { NavBar },
+    components: { NavBar, AnimePlayer },
     methods: { animeDescription },
-    updated: function () {
-        this.anime = this.$root.anime;
+    data: function () {
+        var self = this;
+
+        // this.$router.beforeEach(function (from, to, next) {
+        //     if ( from.name === 'browser' ) {
+        //         self.anime = self.$root.anime;
+
+        //         if ( self.$root.scrolls.browser )
+        //             self.$root.scrolls.browser = 0;
+        //     }
+
+        //     return next();
+        // });
+
+        return {};
     },
 
-    data: function () {
-        return {
-            anime: this.$root.anime
+    computed: {
+        anime () {
+            return this.$store.state.anime;
         }
     }
 }

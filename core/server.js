@@ -11,7 +11,7 @@ async function run () {
 
 function server () {
     app = express();
-    app.use( express.static('interface/dist') );
+    app.use( express.static(config.gui.path) );
     
     return new Promise(function (resolve) {
         app.listen(config.gui.port, function () {
@@ -27,5 +27,9 @@ function aliases () {
 
     app.get(index, function (req, res) {
         res.sendFile(gui.path + '/index.html');
+    });
+	
+	app.get('/update', function (req, res) {
+        res.sendFile(gui.path + '/update.html');
     });
 }

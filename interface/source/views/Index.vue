@@ -1,5 +1,5 @@
 <template lang="pug">
-    div#index
+    div#index( class='scroll-content' )
         NavBar
 
         AnimeList(

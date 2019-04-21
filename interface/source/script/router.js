@@ -6,7 +6,7 @@ import Browser from 'view/Browser.vue'
 export default {
     use: Router,
     data: new Router({
-        mode: 'history',
+        mode: 'hash',
         routes: [
             {
                 path: '/',

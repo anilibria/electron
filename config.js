@@ -1,6 +1,6 @@
 global.Config = {
     gui: {
-        type: 'server',
+        type: 'local',
         port: 8080,
         host: 'localhost',
         path: `${__dirname}/interface/dist`

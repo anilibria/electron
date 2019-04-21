@@ -9,18 +9,23 @@ function data () {
     return new Vuex.Store({
         strict: true,
         state: states(),
-        mutations: { setAnime}
+        mutations: { setAnime, setSeries }
     });
 }
 
 function states () {
     return {
         title: 'Anilibria TV',
-        anime: false
+        anime: false,
+        series: 0
     };
 }
 
 function setAnime (state, anime) {
-    console.log(anime);
+    state.series = 0;
     state.anime = anime;
+}
+
+function setSeries (state, series) {
+    state.series = series;
 }

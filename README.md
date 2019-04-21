@@ -3,7 +3,7 @@
 [![license:mit](https://img.shields.io/badge/license-mit-blue.svg)](https://opensource.org/licenses/MIT)
 [![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/)
 [![node](https://img.shields.io/node/v/electron.svg)](https://nodejs.org/)  
-*Version 0.1.9 Raphtalia*
+*Version 0.1.10 Raphtalia*
 
 The application consists of two parts: `core` and `interface`.  
 In simple words `core` it's "backend" of application and `interface` - "frontend"  

@@ -57,7 +57,7 @@ class Window extends BrowserWindow {
      * @param {String} url - Url for set
      */
     set url (url) {
-        this.loadURL(utl);
+        this.loadURL(url);
     }
 
     /**

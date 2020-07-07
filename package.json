@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@vue/cli-service": "^3.5.0",
-    "electron": "^4.1.4",
+    "electron": "^9.1.0",
     "electron-builder": "^20.39.0",
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
